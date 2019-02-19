@@ -7,8 +7,7 @@ public class MainGameController : MonoBehaviour
     public GameObject BackgroundEnviroment;
     public GameObject VRPlayerController;
     //Texture list
-    public Material env1_material;
-    public Material env2_material;
+    public Material[] env_material_list;
 
     // bool variables
 
@@ -25,28 +24,34 @@ public class MainGameController : MonoBehaviour
 
     }
 
-    public void handlePressedButton(int mode){
+    public void handlePressedButton(int mode)
+    {
         changeEnviroment(mode);
     }
 
-    public void changeEnviroment(int mode){
-        switch(mode){
-            case 1:
-                //BackgroundEnviroment.GetComponent<Renderer>().material.mainTexture = env1_texture;
-                Debug.Log("Mode 1");
-                break;
-            case 2:
-                // Set new texture for material 
-                //BackgroundEnviroment.GetComponent<Renderer>().material.mainTexture = env1_texture;
-                Debug.Log("Mode 2");
-                break;
-            default : 
-                // Do something in here
-                break;
-        }
+    public void changeEnviroment(int mode)
+    {
+        //switch (mode)
+        //{
+        //    case 1:
+        //        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[mode];
+        //        Debug.Log("Mode 1");
+        //        break;
+        //    case 2:
+        //        // Set new texture for material 
+        //        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env2_material;
+        //        Debug.Log("Mode 2");
+        //        break;
+        //    default:
+        //        // Do something in here
+        //        break;
+        //}
+        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[mode-1];
+
     }
 
-    private void makeZoom(){
+    private void makeZoom()
+    {
         // Get button position 
         Vector3 btnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         // Get Camera object from player controller
@@ -61,6 +66,7 @@ public class MainGameController : MonoBehaviour
         mainCamera.transform.position = Vector3.Lerp(cameraFirstPosition, btnPosition, speed);
     }
 
+#if UNITY_EDITOR
     /*
      * Variables for testing 
     */
@@ -69,10 +75,13 @@ public class MainGameController : MonoBehaviour
 
     private void OnGUI()
     {
-        if(GUI.Button(new Rect(20,20, 50,50),"Press to chage")){
+        if (GUI.Button(new Rect(20, 20, 50, 50), "Press to chage"))
+        {
             // Change texture testing 
-            BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env2_material;
+            BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[test_mode];
         }
+
     }
 
+#endif
 }
