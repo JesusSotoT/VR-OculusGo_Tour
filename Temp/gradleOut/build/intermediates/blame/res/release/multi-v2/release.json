@@ -1,51 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mrrs/Works/Unity/VR_OculusSimple/Temp/gradleOut/build/intermediates/res/merged/release/values-v21_values-v21.arsc.flat",
+            "outputFile": "/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/build/intermediates/res/merged/release/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/mrrs/Works/Unity/VR_OculusSimple/Temp/gradleOut/src/main/res/values-v21/styles.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "0",
-                        "startOffsets": "53",
-                        "endLines": "3",
-                        "endColumns": "8",
-                        "endOffsets": "153"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "3",
-                        "endColumns": "8",
-                        "endOffsets": "154"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/mrrs/Works/Unity/VR_OculusSimple/Temp/gradleOut/build/intermediates/res/merged/release/values_values.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/mrrs/.gradle/caches/transforms-1/files-1.1/OVRPlugin.aar/3709b1d763bf7f980355d00a45c11115/res/values/values.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "2",
-                        "startOffsets": "53",
-                        "endColumns": "41",
-                        "endOffsets": "92"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "105",
-                        "endColumns": "43",
-                        "endOffsets": "144"
-                    }
-                },
-                {
-                    "source": "/Users/mrrs/Works/Unity/VR_OculusSimple/Temp/gradleOut/src/main/res/values/strings.xml",
+                    "source": "/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "2",
@@ -62,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/mrrs/Works/Unity/VR_OculusSimple/Temp/gradleOut/src/main/res/values/styles.xml",
+                    "source": "/Users/mrrs/.gradle/caches/transforms-1/files-1.1/OVRPlugin.aar/f6a1c1d8eb73a0fd34b1a51b9aef2d1d/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "2",
+                        "startOffsets": "55",
+                        "endColumns": "41",
+                        "endOffsets": "94"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "43",
+                        "endOffsets": "144"
+                    }
+                },
+                {
+                    "source": "/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "5,2,7",
                         "startColumns": "0,0,0",
@@ -78,6 +54,30 @@
                         "endLines": "5,8,12",
                         "endColumns": "8,8,8",
                         "endOffsets": "244,382,609"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/build/intermediates/res/merged/release/values-v21_values-v21.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/res/values-v21/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "0",
+                        "startOffsets": "53",
+                        "endLines": "3",
+                        "endColumns": "8",
+                        "endOffsets": "153"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "3",
+                        "endColumns": "8",
+                        "endOffsets": "154"
                     }
                 }
             ]

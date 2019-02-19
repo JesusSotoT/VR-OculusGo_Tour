@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mrrs.OculusTour"
+    package="com.mrrs.OculusSimple"
     android:installLocation="auto"
     android:versionCode="1"
-    android:versionName="1" >
+    android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="22"
+        android:minSdkVersion="21"
         android:targetSdkVersion="28" />
 
     <supports-screens
@@ -17,13 +17,6 @@
         android:xlargeScreens="true" />
 
     <uses-feature android:glEsVersion="0x00020000" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
-    <uses-feature
-        android:name="android.hardware.microphone"
-        android:required="false" />
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
@@ -34,6 +27,7 @@
         android:name="android.hardware.touchscreen.multitouch.distinct"
         android:required="false" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -53,7 +47,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
 
             <meta-data
@@ -63,7 +56,7 @@
 
         <meta-data
             android:name="unity.build-id"
-            android:value="cefaf029-72d5-4938-87fe-11d033a6b245" />
+            android:value="8f1dc7f6-8172-45ab-9957-e1ea646ddd96" />
         <meta-data
             android:name="unity.splash-mode"
             android:value="0" />

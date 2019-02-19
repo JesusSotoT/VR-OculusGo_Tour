@@ -31,14 +31,14 @@ android {
     buildToolsVersion '28.0.1'
 
     defaultConfig {
-        minSdkVersion 22
+        minSdkVersion 21
         targetSdkVersion 28
-        applicationId 'com.mrrs.OculusTour'
+        applicationId 'com.mrrs.OculusSimple'
         ndk {
             abiFilters 'armeabi-v7a', 'x86'
         }
         versionCode 1
-        versionName '1'
+        versionName '1.0'
     }
 
     lintOptions {

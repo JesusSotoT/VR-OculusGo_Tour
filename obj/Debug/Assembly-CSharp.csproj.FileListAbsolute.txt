@@ -1,0 +1,2 @@
+/Users/mrrs/Works/Unity/VR-OculusGo_Tour/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/mrrs/Works/Unity/VR-OculusGo_Tour/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
