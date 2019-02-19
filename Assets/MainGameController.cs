@@ -6,23 +6,11 @@ public class MainGameController : MonoBehaviour
 {
     public GameObject BackgroundEnviroment;
     public GameObject VRPlayerController;
-
-
     //Texture list
-    public Texture env1_texture;
-    public Texture env2_texture;
+    public Material env1_material;
+    public Material env2_material;
 
     // bool variables
-
-    /*
-     * Default mode is 1
-    */
-    private int mode = 1;
-     
-    /*
-     * It is condition for check up to mode
-    */
-    private int maximum_mode = 2;
 
 
     // Use this for initialization
@@ -37,34 +25,53 @@ public class MainGameController : MonoBehaviour
 
     }
 
-    public void handlePressedButton(){
-        changeEnviroment();
+    public void handlePressedButton(int mode){
+        changeEnviroment(mode);
     }
 
-
-    public void changeEnviroment(){
-
-        // Check mode maximum
-        if(mode != maximum_mode){
-            mode += 1;
-        }else{
-            // Reset mode 
-            mode = 1;
-        }
-
-        // Get Component render from GameObject
-        Renderer m_render = BackgroundEnviroment.GetComponent<Renderer>();
-        // Get material from render
+    public void changeEnviroment(int mode){
         switch(mode){
             case 1:
-                m_render.material.SetTexture("_MODE1", env1_texture);
+                //BackgroundEnviroment.GetComponent<Renderer>().material.mainTexture = env1_texture;
+                Debug.Log("Mode 1");
                 break;
             case 2:
-                m_render.material.SetTexture("_MODE2", env2_texture);
+                // Set new texture for material 
+                //BackgroundEnviroment.GetComponent<Renderer>().material.mainTexture = env1_texture;
+                Debug.Log("Mode 2");
                 break;
             default : 
                 // Do something in here
                 break;
+        }
+    }
+
+    private void makeZoom(){
+        // Get button position 
+        Vector3 btnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        // Get Camera object from player controller
+        Camera mainCamera = VRPlayerController.GetComponent<Camera>();
+        // Get first position of camera 
+        Vector3 cameraFirstPosition = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+        // Math distance to camera's position to button's position
+        float distance = Vector3.Distance(cameraFirstPosition, btnPosition);
+        // Set speed to move
+        float speed = 2f * Time.deltaTime;
+        // Move camera to near object
+        mainCamera.transform.position = Vector3.Lerp(cameraFirstPosition, btnPosition, speed);
+    }
+
+    /*
+     * Variables for testing 
+    */
+
+    public int test_mode = 1;
+
+    private void OnGUI()
+    {
+        if(GUI.Button(new Rect(20,20, 50,50),"Press to chage")){
+            // Change texture testing 
+            BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env2_material;
         }
     }
 
