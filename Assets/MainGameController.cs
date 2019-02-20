@@ -9,61 +9,80 @@ public class MainGameController : MonoBehaviour
     //Texture list
     public Material[] env_material_list;
 
-    // bool variables
+
+    public GameObject canvas1;
+    public GameObject canvas2;
+
+    // Transforms to act as start and end markers for the journey.
+    public Transform startMarker;
+    public Transform[] endMarkerList;
+
+    // Movement speed in units/sec.
+    public float speed = 10.0F;
+
+    // Time when the movement started.
+    private float startTime;
+
+    // Total distance between the markers.
+    private float journeyLength = 1;
+
+    private bool isCanRun = false;
+
+    private int indexItemInEndList;
+
+    //public OVRScreenFade ovrScreenFadeScript;
+    public MonoBehaviour ovrScreenFadeScript;
 
 
     // Use this for initialization
     void Start()
     {
-
+        ovrScreenFadeScript.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isCanRun)
+        {
+            // Distance moved = time * speed.
+            float distCovered = (Time.time - startTime) * 20f;
+
+            // Fraction of journey completed = current distance divided by total distance.
+            float fracJourney = distCovered / journeyLength;
+
+            // Set position with custom Z
+            Vector3 endMarkerPoint = new Vector3(endMarkerList[indexItemInEndList].position.x, endMarkerList[indexItemInEndList].position.y, endMarkerList[indexItemInEndList].position.z - 2f);
+
+            // Set our position as a fraction of the distance between the markers.
+            startMarker.transform.position = Vector3.Lerp(startMarker.position, endMarkerPoint, fracJourney);
+        }
 
     }
 
-    public void handlePressedButton(int mode)
+    IEnumerator handlePressedButton(int mode)
     {
-        changeEnviroment(mode);
+        // Move Camera to Postion 
+        makeZoom(mode);
+
+        // Delay make zom
+        yield return new WaitForSeconds(0.25f);
+        // Loading screen fade
+        gameObject.GetComponent<OVRScreenFade>().enabled = true;
+
+        // Change Sphere Texture
+        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[mode - 1];
     }
 
-    public void changeEnviroment(int mode)
+    private void makeZoom(int index)
     {
-        //switch (mode)
-        //{
-        //    case 1:
-        //        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[mode];
-        //        Debug.Log("Mode 1");
-        //        break;
-        //    case 2:
-        //        // Set new texture for material 
-        //        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env2_material;
-        //        Debug.Log("Mode 2");
-        //        break;
-        //    default:
-        //        // Do something in here
-        //        break;
-        //}
-        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[mode-1];
+        // Keep a note of the time the movement started.
+        startTime = Time.time;
+        // Calculate the journey length.
+        journeyLength = Vector3.Distance(startMarker.position, endMarkerList[index-1].position);
+        indexItemInEndList = index - 1;
+        isCanRun = true;
 
-    }
-
-    private void makeZoom()
-    {
-        // Get button position 
-        Vector3 btnPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        // Get Camera object from player controller
-        Camera mainCamera = VRPlayerController.GetComponent<Camera>();
-        // Get first position of camera 
-        Vector3 cameraFirstPosition = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
-        // Math distance to camera's position to button's position
-        float distance = Vector3.Distance(cameraFirstPosition, btnPosition);
-        // Set speed to move
-        float speed = 2f * Time.deltaTime;
-        // Move camera to near object
-        mainCamera.transform.position = Vector3.Lerp(cameraFirstPosition, btnPosition, speed);
     }
 
 #if UNITY_EDITOR
@@ -73,13 +92,20 @@ public class MainGameController : MonoBehaviour
 
     public int test_mode = 1;
 
-    private void OnGUI()
+    private void  OnGUI()
     {
         if (GUI.Button(new Rect(20, 20, 50, 50), "Press to chage"))
         {
             // Change texture testing 
-            BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[test_mode];
+            BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[test_mode-1];
         }
+
+        if (GUI.Button(new Rect(20, 70, 100, 50), "Move Camera"))
+        {
+            StartCoroutine(handlePressedButton(test_mode));
+        }
+
+
 
     }
 

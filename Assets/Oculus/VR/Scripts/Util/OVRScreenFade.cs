@@ -35,6 +35,7 @@ public class OVRScreenFade : MonoBehaviour
 
     public bool fadeOnStart = true;
 
+
 	/// <summary>
 	/// The render queue used by the fade mesh. Reduce this if you need to render on top of it.
 	/// </summary>
@@ -61,9 +62,9 @@ public class OVRScreenFade : MonoBehaviour
 
 		Vector3[] vertices = new Vector3[4];
 
-		float width = 2f;
-		float height = 2f;
-		float depth = 1f;
+		float width = 300f;
+		float height = 300f;
+		float depth = 2f;
 
 		vertices[0] = new Vector3(-width, -height, depth);
 		vertices[1] = new Vector3(width, -height, depth);
