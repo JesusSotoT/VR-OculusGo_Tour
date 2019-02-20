@@ -126,16 +126,16 @@
     <None Include="Assets\Shaders\Pano360Shader.shader" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/mrrs/Works/Unity/testingVR/VR-OculusGo_Tour/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/mrrs/Works/Unity/testingVR/VR-OculusGo_Tour/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/mrrs/Works/Unity/testingVR/VR-OculusGo_Tour/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/mrrs/Works/Unity/testingVR/VR-OculusGo_Tour/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
