@@ -18,11 +18,11 @@ public class MainGameController : MonoBehaviour
     public Transform[] endMarkerList;
 
     // Movement speed in units/sec.
-    public float speed = 10.0F;
+    public float speed;
 
     // Time when the movement started.
     private float startTime;
-
+    private float fracJourney;
     // Total distance between the markers.
     private float journeyLength = 1;
 
@@ -30,14 +30,14 @@ public class MainGameController : MonoBehaviour
 
     private int indexItemInEndList;
 
-    //public OVRScreenFade ovrScreenFadeScript;
-    public MonoBehaviour ovrScreenFadeScript;
+    private Vector3 cameraFirstPosition;
 
+    private int playerMode;
 
     // Use this for initialization
     void Start()
     {
-        ovrScreenFadeScript.enabled = false;
+        cameraFirstPosition = startMarker.transform.position;
     }
 
     // Update is called once per frame
@@ -46,10 +46,10 @@ public class MainGameController : MonoBehaviour
         if (isCanRun)
         {
             // Distance moved = time * speed.
-            float distCovered = (Time.time - startTime) * 20f;
+            float distCovered = (Time.time - startTime) * speed;
 
             // Fraction of journey completed = current distance divided by total distance.
-            float fracJourney = distCovered / journeyLength;
+            fracJourney = distCovered / journeyLength;
 
             // Set position with custom Z
             Vector3 endMarkerPoint = new Vector3(endMarkerList[indexItemInEndList].position.x, endMarkerList[indexItemInEndList].position.y, endMarkerList[indexItemInEndList].position.z - 2f);
@@ -58,20 +58,34 @@ public class MainGameController : MonoBehaviour
             startMarker.transform.position = Vector3.Lerp(startMarker.position, endMarkerPoint, fracJourney);
         }
 
+ 
+
     }
 
-    IEnumerator handlePressedButton(int mode)
+    public void  handlePressedButton(int mode)
     {
+        playerMode = mode;
         // Move Camera to Postion 
         makeZoom(mode);
+        StartCoroutine(handleAfterZoom());  
+    }
 
-        // Delay make zom
-        yield return new WaitForSeconds(0.25f);
+
+    IEnumerator handleAfterZoom()
+    {
+        // Delay to wait zoom process finish
+        yield return new WaitForSeconds(0.5f);
         // Loading screen fade
-        gameObject.GetComponent<OVRScreenFade>().enabled = true;
-
+        // Adding Fade script
+        var addingGameObject = gameObject.AddComponent<OVRScreenFade>();
         // Change Sphere Texture
-        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[mode - 1];
+        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[playerMode - 1];
+        isCanRun = false;
+        previousFirstCameraPosition();
+        yield return new WaitForSeconds(addingGameObject.fadeTime);
+        // Remove Component
+        Destroy(addingGameObject);
+
     }
 
     private void makeZoom(int index)
@@ -83,6 +97,10 @@ public class MainGameController : MonoBehaviour
         indexItemInEndList = index - 1;
         isCanRun = true;
 
+    }
+
+    private void previousFirstCameraPosition(){
+        startMarker.transform.position = Vector3.zero;
     }
 
 #if UNITY_EDITOR
@@ -102,11 +120,8 @@ public class MainGameController : MonoBehaviour
 
         if (GUI.Button(new Rect(20, 70, 100, 50), "Move Camera"))
         {
-            StartCoroutine(handlePressedButton(test_mode));
+            handlePressedButton(test_mode);
         }
-
-
-
     }
 
 #endif

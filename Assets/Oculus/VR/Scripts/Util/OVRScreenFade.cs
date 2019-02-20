@@ -28,7 +28,7 @@ using System.Collections; // required for Coroutines
 public class OVRScreenFade : MonoBehaviour
 {
     [Tooltip("Fade duration")]
-	public float fadeTime = 2.0f;
+	public float fadeTime = 1.0f;
 
     [Tooltip("Screen color at maximum fade")]
 	public Color fadeColor = new Color(0.01f, 0.01f, 0.01f, 1.0f);
@@ -50,8 +50,10 @@ public class OVRScreenFade : MonoBehaviour
 
     public float currentAlpha { get; private set; }
 
+
 	void Awake()
 	{
+
 		// create the fade material
 		fadeMaterial = new Material(Shader.Find("Oculus/Unlit Transparent Color"));
 		fadeMesh = gameObject.AddComponent<MeshFilter>();
@@ -62,9 +64,9 @@ public class OVRScreenFade : MonoBehaviour
 
 		Vector3[] vertices = new Vector3[4];
 
-		float width = 300f;
-		float height = 300f;
-		float depth = 2f;
+		float width = 100f;
+		float height = 100f;
+		float depth = 1f;
 
 		vertices[0] = new Vector3(-width, -height, depth);
 		vertices[1] = new Vector3(width, -height, depth);
@@ -180,7 +182,7 @@ public class OVRScreenFade : MonoBehaviour
 	/// </summary>
 	IEnumerator Fade(float startAlpha, float endAlpha)
 	{
-		float elapsedTime = 0.0f;
+        float elapsedTime = 0.0f;
 		while (elapsedTime < fadeTime)
 		{
 			elapsedTime += Time.deltaTime;
