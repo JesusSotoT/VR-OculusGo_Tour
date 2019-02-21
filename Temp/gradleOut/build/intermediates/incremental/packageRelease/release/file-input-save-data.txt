@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Feb 21 11:32:17 ICT 2019
+#Thu Feb 21 12:49:26 ICT 2019
 60.set=ASSET
 52.set=NATIVE_RESOURCE
 53.base=/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/build/intermediates/assets/release

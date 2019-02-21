@@ -9,8 +9,7 @@ public class MainGameController : MonoBehaviour
     //Texture list
     public Material[] env_material_list;
 
-    public GameObject canvas1;
-    public GameObject canvas2;
+    public Camera mainCamera;
 
     // Transforms to act as start and end markers for the journey.
     public Transform startMarker;
@@ -22,22 +21,16 @@ public class MainGameController : MonoBehaviour
     // Time when the movement started.
     private float startTime;
     private float fracJourney;
+
     // Total distance between the markers.
     private float journeyLength = 1;
-
-    private bool isCanRun = false;
 
     private int indexItemInEndList;
 
     private Vector3 cameraFirstPosition;
 
-    private bool isStopTime =false;
-
     private bool isFacingTime = false;
-
-    private float strength = 0.5f;
-
-    public Camera mainCamera;
+    private bool isCanRun = false;
 
     float startTimeRot = 0;
     // Use this for initialization
@@ -49,18 +42,15 @@ public class MainGameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Rotate camera face for opposite
         if(isFacingTime){
-
             float distCoveredRot = (Time.time - startTimeRot) * speed;
-
             Debug.Log("First function ");
             // Set vector for target rotation 
-            //float str = Mathf.Min(strength * Time.deltaTime, 1);
             var targetRotation = Quaternion.LookRotation(endMarkerList[indexItemInEndList ].transform.position - mainCamera.gameObject.transform.position);
-
             Debug.Log("targetRotation " + targetRotation +"\n Time: "+Time.deltaTime);
+            // Rotate camera to opposite with endMarker(target Marker)
             mainCamera.gameObject.transform.rotation = Quaternion.Slerp(mainCamera.gameObject.transform.rotation, targetRotation, distCoveredRot);
-
             Debug.Log("transform: "+ mainCamera.gameObject.transform.rotation);
 
         }
@@ -70,12 +60,8 @@ public class MainGameController : MonoBehaviour
             // Distance moved = time * speed.
             float distCovered = (Time.time - startTime) * speed;
 
-            Debug.Log("distCovered: " + distCovered);
-
             // Fraction of journey completed = current distance divided by total distance.
             fracJourney = distCovered / journeyLength;
-
-            Debug.Log("Fraction: " + fracJourney);
 
             // Set position with custom Z
             Vector3 endMarkerPoint = new Vector3(endMarkerList[indexItemInEndList].position.x, endMarkerList[indexItemInEndList].position.y, endMarkerList[indexItemInEndList].position.z);
@@ -94,17 +80,12 @@ public class MainGameController : MonoBehaviour
 
     }
 
-    private bool isFaceing(){
-        return false;
-    }
-
     public void  handlePressedButton(int mode)
     {
         lookAtWithEndMarker(mode);
         // Move Camera to Postion 
         makeZoom(mode);
     }
-
 
     IEnumerator handleAfterZoom()
     {
@@ -124,9 +105,6 @@ public class MainGameController : MonoBehaviour
         startTime = Time.time;
         // Calculate the journey length.
         journeyLength = Vector3.Distance(startMarker.position, endMarkerList[index-1].position);
-
-        Debug.Log("Journey Legth: " + journeyLength);
-
         indexItemInEndList = index - 1;
         isCanRun = true;
 

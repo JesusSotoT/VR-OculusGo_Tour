@@ -254,7 +254,7 @@ aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 e29b82c8bf28b8e4fdcc14242aa8879d Assembly-CSharp.dll:.OVRGridCube
 bf9092984e391e854436c93547ae117f Assembly-CSharp.dll:.OVRLint
-dc09872e0e02d27bed2a5f5df8570036 Assembly-CSharp.dll:.MainGameController
+dcce948d6e8d5485007da01d99dc49ec Assembly-CSharp.dll:.MainGameController
 d1e8ed93b5353b4bdbd86d474ab618b5 Assembly-CSharp.dll:UnityEngine.EventSystems.OVRInputModule
 e7264fa9ee3a8a07bb0d50abc40c07a0 Assembly-CSharp.dll:.OVRGrabber
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
