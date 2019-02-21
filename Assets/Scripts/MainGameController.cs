@@ -56,7 +56,7 @@ public class MainGameController : MonoBehaviour
             Debug.Log("First function ");
             // Set vector for target rotation 
             //float str = Mathf.Min(strength * Time.deltaTime, 1);
-            var targetRotation = Quaternion.LookRotation(endMarkerList[test_mode-1].transform.position - mainCamera.gameObject.transform.position);
+            var targetRotation = Quaternion.LookRotation(endMarkerList[indexItemInEndList ].transform.position - mainCamera.gameObject.transform.position);
 
             Debug.Log("targetRotation " + targetRotation +"\n Time: "+Time.deltaTime);
             mainCamera.gameObject.transform.rotation = Quaternion.Slerp(mainCamera.gameObject.transform.rotation, targetRotation, distCoveredRot);
@@ -100,6 +100,7 @@ public class MainGameController : MonoBehaviour
 
     public void  handlePressedButton(int mode)
     {
+        lookAtWithEndMarker(mode);
         // Move Camera to Postion 
         makeZoom(mode);
     }
@@ -131,7 +132,16 @@ public class MainGameController : MonoBehaviour
 
     }
 
+    private void  lookAtWithEndMarker(int index){
+        isFacingTime = true;
+        startTimeRot = Time.time;
+    }
+
     private void previousFirstCameraPosition(){
+        isFacingTime = false;
+        // Reset camera's rotate 
+        mainCamera.gameObject.transform.rotation = Quaternion.Euler(0,0,0);
+        // Reset controller's position
         VRPlayerController.gameObject.transform.position = Vector3.zero;
     }
 
@@ -156,9 +166,7 @@ public class MainGameController : MonoBehaviour
         }
         if (GUI.Button(new Rect(20, 120, 100, 50), "Facing Camera"))
         {
-            isFacingTime = true;
-            startTimeRot = Time.time;
-            handlePressedButton(test_mode);
+            handlePressedButton(test_mode); 
         }
 
     }
