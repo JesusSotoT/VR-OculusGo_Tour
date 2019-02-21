@@ -109,6 +109,7 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
+    <Compile Include="Assets\Scripts\ButtonSetup.cs" />
     <Compile Include="Assets\Scripts\MainGameController.cs" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRUnlitTransparent.shader" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRChromaKey.cginc" />
