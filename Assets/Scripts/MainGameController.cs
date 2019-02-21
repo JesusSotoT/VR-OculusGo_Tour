@@ -31,7 +31,7 @@ public class MainGameController : MonoBehaviour
 
     private bool isFacingTime = false;
     private bool isCanRun = false;
-
+    private bool isMoving = false;
     float startTimeRot = 0;
     // Use this for initialization
     void Start()
@@ -82,9 +82,11 @@ public class MainGameController : MonoBehaviour
 
     public void  handlePressedButton(int mode)
     {
-        lookAtWithEndMarker(mode);
-        // Move Camera to Postion 
-        makeZoom(mode);
+        if(!isMoving){
+            lookAtWithEndMarker(mode);
+            // Move Camera to Postion 
+            makeZoom(mode);
+        }
     }
 
     IEnumerator handleAfterZoom()
@@ -108,6 +110,8 @@ public class MainGameController : MonoBehaviour
         indexItemInEndList = index - 1;
         isCanRun = true;
 
+        isMoving = true;
+
     }
 
     private void  lookAtWithEndMarker(int index){
@@ -121,6 +125,8 @@ public class MainGameController : MonoBehaviour
         mainCamera.gameObject.transform.rotation = Quaternion.Euler(0,0,0);
         // Reset controller's position
         VRPlayerController.gameObject.transform.position = Vector3.zero;
+        // Object stay => Can make it move
+        isMoving = false;
     }
 
 #if UNITY_EDITOR
