@@ -31,10 +31,15 @@ public class MainGameController : MonoBehaviour
 
     private Vector3 cameraFirstPosition;
 
-    private int playerMode;
-
     private bool isStopTime =false;
 
+    private bool isFacingTime = false;
+
+    private float strength = 0.5f;
+
+    public Camera mainCamera;
+
+    float startTimeRot = 0;
     // Use this for initialization
     void Start()
     {
@@ -44,6 +49,22 @@ public class MainGameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isFacingTime){
+
+            float distCoveredRot = (Time.time - startTimeRot) * speed;
+
+            Debug.Log("First function ");
+            // Set vector for target rotation 
+            //float str = Mathf.Min(strength * Time.deltaTime, 1);
+            var targetRotation = Quaternion.LookRotation(endMarkerList[test_mode-1].transform.position - mainCamera.gameObject.transform.position);
+
+            Debug.Log("targetRotation " + targetRotation +"\n Time: "+Time.deltaTime);
+            mainCamera.gameObject.transform.rotation = Quaternion.Slerp(mainCamera.gameObject.transform.rotation, targetRotation, distCoveredRot);
+
+            Debug.Log("transform: "+ mainCamera.gameObject.transform.rotation);
+
+        }
+
         if (isCanRun)
         {
             // Distance moved = time * speed.
@@ -62,42 +83,33 @@ public class MainGameController : MonoBehaviour
             // Set our position as a fraction of the distance between the markers.
             VRPlayerController.gameObject.transform.position = Vector3.Lerp(cameraFirstPosition, endMarkerPoint, fracJourney);
 
-            // Check distance between marker
-            float distanceStartEnd = Vector3.Distance(startMarker.position, endMarkerPoint);
-
-            Debug.Log("distanceStartEnd: " + distanceStartEnd);
-           
         }
 
-        if(fracJourney == 1)
+        if(fracJourney >= 0.8)
         {
             StartCoroutine(handleAfterZoom());
+            isCanRun = false;
+            fracJourney = 0.0f;
         }
 
+    }
 
- 
-
+    private bool isFaceing(){
+        return false;
     }
 
     public void  handlePressedButton(int mode)
     {
-        playerMode = mode;
         // Move Camera to Postion 
         makeZoom(mode);
-        //StartCoroutine(handleAfterZoom());  
     }
 
 
     IEnumerator handleAfterZoom()
     {
-        // Delay to wait zoom process finish
-        //yield return new WaitForSeconds(0.5f);
-        // Loading screen fade
-        // Adding Fade script
         var addingGameObject = gameObject.AddComponent<OVRScreenFade>();
         // Change Sphere Texture
-        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[playerMode - 1];
-        isCanRun = false;
+        BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[indexItemInEndList];
         previousFirstCameraPosition();
         yield return new WaitForSeconds(addingGameObject.fadeTime);
         // Remove Component
@@ -120,7 +132,7 @@ public class MainGameController : MonoBehaviour
     }
 
     private void previousFirstCameraPosition(){
-        startMarker.transform.position = Vector3.zero;
+        VRPlayerController.gameObject.transform.position = Vector3.zero;
     }
 
 #if UNITY_EDITOR
@@ -128,7 +140,7 @@ public class MainGameController : MonoBehaviour
      * Variables for testing 
     */
 
-    public int test_mode = 1;
+    public int test_mode;
 
     private void  OnGUI()
     {
@@ -142,6 +154,13 @@ public class MainGameController : MonoBehaviour
         {
             handlePressedButton(test_mode);
         }
+        if (GUI.Button(new Rect(20, 120, 100, 50), "Facing Camera"))
+        {
+            isFacingTime = true;
+            startTimeRot = Time.time;
+            handlePressedButton(test_mode);
+        }
+
     }
 
 #endif

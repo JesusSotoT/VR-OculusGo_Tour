@@ -1356,11 +1356,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd,
     type: 2}
   m_PrefabInternal: {fileID: 1110214431}
---- !u!4 &1258399385 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd,
-    type: 2}
-  m_PrefabInternal: {fileID: 1110214431}
 --- !u!1 &1573308306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,6 +1506,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594284004}
   m_CullTransparentMesh: 0
+--- !u!1 &1855383252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855383253}
+  m_Layer: 0
+  m_Name: StartMarker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1855383253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855383252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914877799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,13 +1620,13 @@ MonoBehaviour:
   - {fileID: 2100000, guid: dca994e3b29e54aa9ab2dd937e49ce31, type: 2}
   canvas1: {fileID: 2109151273}
   canvas2: {fileID: 785428992}
-  startMarker: {fileID: 1258399385}
+  startMarker: {fileID: 1855383253}
   endMarkerList:
   - {fileID: 168130994}
   - {fileID: 1029812014}
   - {fileID: 667842129}
-  speed: 1
-  test_mode: 2
+  speed: 20
+  test_mode: 1
 --- !u!4 &1930598530
 Transform:
   m_ObjectHideFlags: 0
