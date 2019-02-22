@@ -6,6 +6,7 @@ TagManager:
   tags:
   - OVRPlayerController
   - MainControllerPlayer
+  - EndMarker
   layers:
   - Default
   - TransparentFX
