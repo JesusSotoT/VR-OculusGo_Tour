@@ -155,32 +155,30 @@ public class MainGameController : MonoBehaviour
     /*
      * Variables for testing 
     */
+    public bool TestMode;
 
     public int test_mode;
     public string test_sceneName;
 
     private void  OnGUI()
     {
-        //if (GUI.Button(new Rect(20, 20, 50, 50), "Press to chage"))
-        //{
-        //    // Change texture testing 
-        //    //BackgroundEnviroment.GetComponent<Renderer>().sharedMaterial = env_material_list[test_mode-1];
-        //}
+        if(TestMode){
+            if (GUI.Button(new Rect(20, 70, 100, 50), "Move Camera"))
+            {
+                handlePressedButton(test_mode, test_sceneName);
+            }
 
-        if (GUI.Button(new Rect(20, 70, 100, 50), "Move Camera"))
-        {
-            handlePressedButton(test_mode, test_sceneName);
-        }
+            if (GUI.Button(new Rect(20, 120, 100, 50), "Facing Camera"))
+            {
+                handlePressedButton(test_mode, test_sceneName);
+            }
 
-        if (GUI.Button(new Rect(20, 120, 100, 50), "Facing Camera"))
-        {
-            handlePressedButton(test_mode, test_sceneName); 
+            if (GUI.Button(new Rect(20, 190, 100, 50), "Load scene 1"))
+            {
+                SceneManager.LoadScene(test_sceneName, LoadSceneMode.Single);
+            }
         }
-
-        if (GUI.Button(new Rect(20, 190, 100, 50), "Load scene 1"))
-        {
-            SceneManager.LoadScene(test_sceneName, LoadSceneMode.Single);
-        }
+       
 
     }
 
