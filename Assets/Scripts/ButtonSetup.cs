@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 public class ButtonSetup : MonoBehaviour {
     public int index;
@@ -13,11 +10,11 @@ public class ButtonSetup : MonoBehaviour {
 
     }
 
-    private void HandlePressedButton(){
+    public void HandlePressedButton(){
         // Create a object in Controller Class
-        var controller = new MainGameController();
+        //var controller = new MainGameController();
         // Call function press in MainGameController
-        controller.handlePressedButton(index, sceneName);
+        GameObject.FindGameObjectWithTag("MainControllerPlayer").GetComponent<MainGameController>().handlePressedButton(index, sceneName);
     }
 
 

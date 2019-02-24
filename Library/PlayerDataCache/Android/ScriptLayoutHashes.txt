@@ -3,6 +3,7 @@ PlayerPath?
 /Users/mrrs/Works/Build/OculusTour.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
+Assets/Scenes/Test_Scene1.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -202,6 +203,7 @@ c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.OVRDebugInfo
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.CanvasAddEvent
 167742deffda96b61118213d41b7cb2a Assembly-CSharp.dll:.OVRResetOrientation
 e0e4b9a32071c028a4b6508d73740ee0 Assembly-CSharp.dll:.OVRScreenFade
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -254,12 +256,13 @@ aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 e29b82c8bf28b8e4fdcc14242aa8879d Assembly-CSharp.dll:.OVRGridCube
 bf9092984e391e854436c93547ae117f Assembly-CSharp.dll:.OVRLint
-dcce948d6e8d5485007da01d99dc49ec Assembly-CSharp.dll:.MainGameController
+10c4b4e7acebe93bbacdd84167b65352 Assembly-CSharp.dll:.MainGameController
 d1e8ed93b5353b4bdbd86d474ab618b5 Assembly-CSharp.dll:UnityEngine.EventSystems.OVRInputModule
 e7264fa9ee3a8a07bb0d50abc40c07a0 Assembly-CSharp.dll:.OVRGrabber
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
+90aaa764e8e659ad5cb5bb794ec63dbd Assembly-CSharp.dll:.ButtonSetup
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour

@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 968d030ea753c4f1bb942189ce9c4f2b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: bird_rig:bird_poly01
+    100004: bird_rig:joint1
+    100006: bird_rig:joint10
+    100008: bird_rig:joint11
+    100010: bird_rig:joint12
+    100012: bird_rig:joint13
+    100014: bird_rig:joint14
+    100016: bird_rig:joint15
+    100018: bird_rig:joint16
+    100020: bird_rig:joint17
+    100022: bird_rig:joint18
+    100024: bird_rig:joint19
+    100026: bird_rig:joint2
+    100028: bird_rig:joint20
+    100030: bird_rig:joint3
+    100032: bird_rig:joint4
+    100034: bird_rig:joint5
+    100036: bird_rig:joint6
+    100038: bird_rig:joint7
+    100040: bird_rig:joint8
+    100042: bird_rig:joint9
+    100044: bird_rig:left
+    100046: camera1
+    100048: humanBody
+    400000: //RootNode
+    400002: bird_rig:bird_poly01
+    400004: bird_rig:joint1
+    400006: bird_rig:joint10
+    400008: bird_rig:joint11
+    400010: bird_rig:joint12
+    400012: bird_rig:joint13
+    400014: bird_rig:joint14
+    400016: bird_rig:joint15
+    400018: bird_rig:joint16
+    400020: bird_rig:joint17
+    400022: bird_rig:joint18
+    400024: bird_rig:joint19
+    400026: bird_rig:joint2
+    400028: bird_rig:joint20
+    400030: bird_rig:joint3
+    400032: bird_rig:joint4
+    400034: bird_rig:joint5
+    400036: bird_rig:joint6
+    400038: bird_rig:joint7
+    400040: bird_rig:joint8
+    400042: bird_rig:joint9
+    400044: bird_rig:left
+    400046: camera1
+    400048: humanBody
+    2000000: bird_rig:left
+    2000002: camera1
+    2100000: blinn1
+    2100002: birld_gold
+    2300000: humanBody
+    3300000: humanBody
+    4300000: humanBody
+    4300002: bird_rig:bird_poly01
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: bird_rig:bird_poly01
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 211
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -8,7 +8,7 @@ public class MainGameController : MonoBehaviour
     public GameObject VRPlayerController;
     public Camera mainCamera;
     // Transforms to act as start and end markers for the journey.
-    public Transform startMarker;
+    private GameObject startMarker;
     private GameObject[] endMarkerList;
     // Movement speed in units/sec.
     public float speed;
@@ -27,9 +27,11 @@ public class MainGameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        cameraFirstPosition = startMarker.position;
-        // collect object with tag 
+        startMarker = GameObject.FindGameObjectWithTag("StartMarker");
+        cameraFirstPosition = startMarker.gameObject.transform.position;
+        // Auto setup Marker with Tag
         endMarkerList = GameObject.FindGameObjectsWithTag("EndMarker");
+        Debug.Log("List: " + endMarkerList[0]);
     }
     void Update()
     {
@@ -40,9 +42,9 @@ public class MainGameController : MonoBehaviour
             var targetRotation = Quaternion.LookRotation(targetObject.transform.position - mainCamera.gameObject.transform.position);
             // Rotate camera to opposite with endMarker(target Marker)
             mainCamera.gameObject.transform.rotation = Quaternion.Slerp(mainCamera.gameObject.transform.rotation, targetRotation, distCoveredRot);
-
         }
 
+        //Move camera to end marker
         if (isCanRun)
         {
             // Distance moved = time * speed.
@@ -78,6 +80,7 @@ public class MainGameController : MonoBehaviour
                 targetObject = endMarkerList[i];
             }
         }
+
         if (!isMoving){
             sceneNameWillBeLoad = sceneName;
             lookAtWithEndMarker();
@@ -100,7 +103,7 @@ public class MainGameController : MonoBehaviour
         startTime = Time.time;
         indexItemInEndList = index - 1;
         // Calculate the journey length.
-        journeyLength = Vector3.Distance(startMarker.position, targetObject.gameObject.transform.position);
+        journeyLength = Vector3.Distance(startMarker.transform.position, targetObject.gameObject.transform.position);
         isCanRun = true;
         isMoving = true;
     }
@@ -126,25 +129,25 @@ public class MainGameController : MonoBehaviour
     */
     public bool TestMode;
 
-    public int test_mode;
-    public string test_sceneName;
+    public int ObjectTarget;
+    public string SceneName;
 
     private void  OnGUI()
     {
         if(TestMode){
             if (GUI.Button(new Rect(20, 70, 100, 50), "Move Camera"))
             {
-                handlePressedButton(test_mode, test_sceneName);
+                handlePressedButton(ObjectTarget, SceneName);
             }
 
             if (GUI.Button(new Rect(20, 120, 100, 50), "Facing Camera"))
             {
-                handlePressedButton(test_mode, test_sceneName);
+                handlePressedButton(ObjectTarget, SceneName);
             }
 
             if (GUI.Button(new Rect(20, 190, 100, 50), "Load scene 1"))
             {
-                SceneManager.LoadScene(test_sceneName, LoadSceneMode.Single);
+                SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
             }
         }
        
