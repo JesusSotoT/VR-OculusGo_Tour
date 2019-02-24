@@ -6,13 +6,12 @@ public class ButtonSetup : MonoBehaviour {
 
     private void Start()
     {
+        //Set Event for onclick 
         gameObject.GetComponent<Button>().onClick.AddListener(HandlePressedButton);
 
     }
 
     public void HandlePressedButton(){
-        // Create a object in Controller Class
-        //var controller = new MainGameController();
         // Call function press in MainGameController
         GameObject.FindGameObjectWithTag("MainControllerPlayer").GetComponent<MainGameController>().handlePressedButton(index, sceneName);
     }

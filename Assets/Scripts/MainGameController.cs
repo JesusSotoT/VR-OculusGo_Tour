@@ -60,7 +60,7 @@ public class MainGameController : MonoBehaviour
 
         if(fracJourney >= 0.8)
         {
-            handleAfterZoom();
+            StartCoroutine(handleAfterZoom());
             isCanRun = false;
             fracJourney = 0.0f;
         }
@@ -89,11 +89,12 @@ public class MainGameController : MonoBehaviour
         }
     }
 
-    void handleAfterZoom()
+    IEnumerator handleAfterZoom()
     {
         // Change  to target scene
         SceneManager.LoadScene(sceneNameWillBeLoad, LoadSceneMode.Single);
         // Reset object
+        yield return new WaitForSeconds(0.1f);
         previousFirstCameraPosition();
     }
 
