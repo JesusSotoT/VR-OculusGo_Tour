@@ -8,6 +8,8 @@ TagManager:
   - MainControllerPlayer
   - EndMarker
   - StartMarker
+  - Toggle
+  - TogglesAnim
   layers:
   - Default
   - TransparentFX

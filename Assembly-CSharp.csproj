@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\ButtonSetup.cs" />
     <Compile Include="Assets\Scripts\CanvasAddEvent.cs" />
     <Compile Include="Assets\Scripts\MainGameController.cs" />
+    <Compile Include="Assets\Scripts\ModelController.cs" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRUnlitTransparent.shader" />
     <None Include="Assets\Oculus\VR\Resources\OVRMRChromaKey.cginc" />
     <None Include="Assets\Oculus\VR\Shaders\OVRColorRampAlpha.shader" />
