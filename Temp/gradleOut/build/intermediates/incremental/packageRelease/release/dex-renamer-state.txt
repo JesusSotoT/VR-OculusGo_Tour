@@ -1,4 +1,0 @@
-#Mon Feb 25 12:55:42 ICT 2019
-base.0=/Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/build/intermediates/transforms/dex/release/0
-path.0=classes.dex
-renamed.0=classes.dex
