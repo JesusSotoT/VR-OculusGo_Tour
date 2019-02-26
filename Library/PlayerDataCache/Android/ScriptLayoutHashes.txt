@@ -1,9 +1,8 @@
 Android
 PlayerPath?
-/Users/mrrs/Works/Build/OculusTour.apk
+/Users/mrrs/Works/Build/OculusTour_TestVideo.apk
 SceneListBegin?
-Assets/Scenes/VRSampleScene.unity
-Assets/Scenes/Test_Scene1.unity
+Assets/Scenes/TestVideoScene.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -211,6 +210,7 @@ e0e4b9a32071c028a4b6508d73740ee0 Assembly-CSharp.dll:.OVRScreenFade
 49fe7781731f28ab328e2101bf14f930 Assembly-CSharp.dll:.OVRGrabbable
 5c5dcbcb96fdbec906622342be7289fa Assembly-CSharp.dll:.OVRCubemapCapture
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
+0eaa6611a2fe3f9bafc8639126b2e1a8 Assembly-CSharp.dll:.ModelController
 167742deffda96b61118213d41b7cb2a Assembly-CSharp.dll:.OVRModeParms
 08c6088a45e845ebf0916697678538e3 Assembly-CSharp.dll:.OVRGearVrControllerTest
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -332,4 +332,3 @@ c1087bf328bbb39eba5a09f26c3b6368 Vuforia.UnityExtensions.dll:Vuforia.MultiTarget
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-0eaa6611a2fe3f9bafc8639126b2e1a8 Assembly-CSharp.dll:.ModelController
