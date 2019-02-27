@@ -39,7 +39,7 @@ ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/Andr
 	android:anyDensity
 		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:3:135-160
 application
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:3-16:17
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:3-15:17
 MERGED from [:OVRPlugin:] /Users/mrrs/.gradle/caches/transforms-1/files-1.1/OVRPlugin.aar/f6a1c1d8eb73a0fd34b1a51b9aef2d1d/AndroidManifest.xml:4:3-6:17
 MERGED from [:OVRPlugin:] /Users/mrrs/.gradle/caches/transforms-1/files-1.1/OVRPlugin.aar/f6a1c1d8eb73a0fd34b1a51b9aef2d1d/AndroidManifest.xml:4:3-6:17
 	android:label
@@ -47,13 +47,13 @@ MERGED from [:OVRPlugin:] /Users/mrrs/.gradle/caches/transforms-1/files-1.1/OVRP
 	android:icon
 		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:58-89
 	android:banner
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:145-182
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:146-183
 	android:theme
 		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:16-57
 	android:isGame
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:123-144
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:4:123-145
 activity#com.unity3d.player.UnityPlayerActivity
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:5:5-12:16
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:5:5-11:16
 	android:screenOrientation
 		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:5:102-139
 	android:label
@@ -66,8 +66,8 @@ ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/Andr
 		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:5:172-353
 	android:name
 		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:5:15-68
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER+android.intent.category.LEANBACK_LAUNCHER
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:6:7-10:23
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:6:7-9:23
 action#android.intent.action.MAIN
 ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:7:9-61
 	android:name
@@ -76,38 +76,38 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:8:9-69
 	android:name
 		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:8:19-66
-category#android.intent.category.LEANBACK_LAUNCHER
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:9:9-78
-	android:name
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:9:19-75
 meta-data#unityplayer.UnityActivity
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:11:7-82
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:10:7-82
 	android:value
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:11:59-79
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:10:59-79
 	android:name
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:11:18-58
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:10:18-58
 meta-data#unity.build-id
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:13:5-101
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:12:5-101
 	android:value
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:13:46-98
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:12:46-98
 	android:name
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:13:16-45
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:12:16-45
 meta-data#unity.splash-mode
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:14:5-69
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:13:5-69
 	android:value
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:14:49-66
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:13:49-66
 	android:name
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:14:16-48
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:13:16-48
 meta-data#unity.splash-enable
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:15:5-75
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:14:5-75
 	android:value
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:15:51-72
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:14:51-72
 	android:name
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:15:16-50
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:14:16-50
 uses-feature#0x00020000
-ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:17:3-52
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:16:3-52
 	android:glEsVersion
-		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:17:17-49
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:16:17-49
+supports-gl-texture#GL_KHR_texture_compression_astc_ldr
+ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:17:3-77
+	android:name
+		ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:17:24-74
 uses-permission#android.permission.INTERNET
 ADDED from /Users/mrrs/Works/Unity/VR-OculusGo_Tour/Temp/gradleOut/src/main/AndroidManifest.xml:18:3-65
 MERGED from [:OVRPlugin:] /Users/mrrs/.gradle/caches/transforms-1/files-1.1/OVRPlugin.aar/f6a1c1d8eb73a0fd34b1a51b9aef2d1d/AndroidManifest.xml:7:3-65
